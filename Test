@@ -10,13 +10,13 @@ def Find_score(response,answer):
         po = 0
         size = len(a[i])
         if(a[i].isnumeric()):
-            po = points[1]
-        elif(len(a[i])>7):
-            po = points[2]
-        elif(len(a[i])<5):
-            po = points[3]
-        else:
             po = points[4]
+        elif(len(a[i])>7):
+            po = points[3]
+        elif(len(a[i])<5):
+            po = points[0]
+        else:
+            po = points[1]
         max_score = max_score + po
         if(i<len(r)):
             if(r[i] in a):
